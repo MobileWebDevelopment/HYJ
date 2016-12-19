@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>腾势登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<i class="iconfont fl page_back" onclick="window.location.href='index.html'">&#xe60b;</i>
+			腾势登录
+		</div>
+		<section id="page">
+			<div class="wrapper">
+				<div class="input_container">
+					<input type="tel" name="" class="input_txt" id="utxt" placeholder="用户名/邮箱/已验证手机号"/>
+					<i class="clear_txt iconfont" id="ctxt">&#xe60a;</i>
+				</div>
+				<div class="input_container">
+					<input type="password" name="" class="input_txt" value="" placeholder="请输入密码"/>
+					<i class="clear_txt iconfont cpsd">&#xe60a;</i>
+					<i class="iconfont psd_on" id="psd">&#xe606;</i>
+				</div>
+				<a href="distributer.html" id="login">登录</a>
+				<label for="remberme" class="remberme">
+					<input type="checkbox" id="remberme" value="单选框" checked="checked" />
+					<i class="iconfont" id="remember_tag">&#xe600;</i>
+					一个月免登陆
+				</label>
+				<div id="quick_login">
+					<h4>其他登录方式</h4>
+					<a href="javascript:;">
+						<i class="iconfont icon icon_qq">&#xe60c;</i>
+						<br />
+						<span>QQ</span>
+					</a>
+					<a href="javascript:;">
+						<i class="iconfont icon icon_wx">&#xe60d;</i>
+						<br />
+						<span>微信</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+<script src="js/setRem.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//密码开关
+	var oPsd = document.getElementById('psd'),
+		oFirst = oPsd.parentNode.firstElementChild || oPsd.parentNode.firstChild,
+		on = true;
+	oPsd.onclick = function(){
+		if( on ){
+			this.innerHTML = '&#xe608;';
+			oFirst.type = 'text';
+		}else{
+			this.innerHTML = '&#xe606;';
+			oFirst.type = 'password';
+		}
+		on = !on;
+	}
+	//清空输入框按钮的显示与隐藏
+	var oInput_txt = getClass( 'input_txt' );
+	for ( var i = 0; i < oInput_txt.length; i++) {
+		oInput_txt[i].oninput = function(){
+			var	oCTxt = this.nextElementSibling || this.nextSibling;
+			if( this.value != '' ){
+				oCTxt.style.display = 'block';
+			}else{
+				oCTxt.style.display = 'none';
+			}
+		}
+	}
+	//清空输入框
+	var oCtxt = getClass( 'clear_txt' );
+	for ( var i = 0; i < oCtxt.length; i++) {
+		oCtxt[i].onclick = function(){
+			var oPreNode = this.previousElementSibling || this.previousSibling;
+			oPreNode.value = '';
+			this.style.display = 'none';
+		}
+	}
+	//记住密码
+	var oRemLabel = getClass('remberme'),
+		oremInput = document.getElementById('remberme'),
+		oRemTag = document.getElementById('remember_tag'),
+		tag = true;
+	oRemLabel[0].onclick = function(e){
+		e.preventDefault();
+		tag = !tag;
+		if( tag ){
+			oRemTag.innerHTML = '&#xe600;';
+			oRemTag.style.color = '';
+			oremInput.setAttribute('checked','checked');
+		}else{
+			oRemTag.innerHTML = '&#xe601;';
+			oRemTag.style.color = '#989AA4';
+			oremInput.removeAttribute('checked');
+		}
+	}
+	
+	function getClass( name ){
+		if( document.getElementsByClassName ){
+			return document.getElementsByClassName( name );
+		}else{
+			var allNode = document.getElementsByTagName('*');
+			var arr = [];
+			for( var i = 0; i < allNode.length; i++){
+				var names = allNode[i].className.split(' ');
+				for ( var j = 0; j < names.length; j++ ) {
+					if( name == names[j] ){
+						arr.push( allNode[i] );
+					}
+				}
+			}
+			return arr;
+		}
+	}
+</script>
