@@ -1,0 +1,140 @@
+#header{
+	height: 40px;
+	background-color: #F9F9F9;
+	width: 100%;
+	border-bottom: 1px solid #CACACA;
+	line-height: 40px;
+	text-align: center;
+	color: #7F7E7F;
+	position: relative;
+	font-size: 16px;
+}
+#header > .page_back{
+	cursor: pointer;
+}
+#header > .page_back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 25px;
+	color: #808386;
+}
+#page{
+	padding: 0.15rem 0.2rem;
+}
+#page > .wrapper{
+	padding-top: 0.1rem;
+	max-width: 750px;
+}
+#page > .wrapper > .input_container{
+	position: relative;
+	width: 100%;
+	height: 43px;
+	line-height: 43px;
+	overflow: hidden;
+	margin-top: 15px;
+	background-color: #fff;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 0 1px #d7d7d7;
+	box-shadow: 0 0 0 1px #d7d7d7; 
+}
+#page > .wrapper > .input_container > .input_txt{
+	width: 100%;
+	height: 100%;
+	padding: 10px 90px 10px 10px;
+	color: #CCCCCC;
+}
+#page > .wrapper > .input_container > .clear_txt{
+	position: absolute;
+	top: -2px;
+	right: 8px;
+	color: #D8D8D8;
+	font-size: 20px;
+	display: none;
+	cursor: pointer;
+}
+#page > .wrapper > .input_container > .psd_on{
+	position: absolute;
+	top: 0;
+	right: 8px;
+	font-size: 50px;
+	color: #F23030;
+	cursor: pointer;
+}
+#page > .wrapper > .input_container > .cpsd{
+	position: absolute;
+	top: 0;
+	right: 62px;
+}
+#login{
+	display: block;
+	width: 100%;
+	height: 40px;
+	background-color: #EEEEEE;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 2px;
+	margin-top: 25px;
+}
+#page > .wrapper > .remberme{
+	-text-indent: 0.25rem;
+	padding-left: 20px;
+	margin-top: 0.22rem;
+	display: inline-block;
+	color: #616161;
+	position: relative;
+	cursor: pointer;
+}
+#remberme{
+	display: none;
+}
+#remember_tag{
+	font-size: 20px;
+	color: #F23030;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#quick_login{
+	margin-top: .47rem;
+    border-top: 1px solid #d7d7d7;
+    position: relative;
+    padding-top: .21rem;
+    text-align: center;
+}
+#quick_login > h4{
+	position: absolute;
+    top: -0.22rem;
+    left: 50%;
+    background-color: #f3f5f7;
+    padding: .05rem .15rem;
+    color: #616161;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+#quick_login > a{
+	position: relative;
+    width: 0.8rem;
+    color: #616161;
+    display: inline-block;
+    margin: 0.4rem 0.2rem;
+    font-size: 0.24rem;
+}
+#quick_login > a > .icon{
+	display: inline-block;
+	width: 0.8rem;
+	height: 0.8rem;
+	font-size: 0.8rem;
+}
+#quick_login > a > span{
+	margin-top: 0.1rem;
+	display: inline-block;
+}
+#quick_login > a > .icon_qq{
+	color: #63AFFE;
+	margin-bottom: 0.01rem;
+}
+#quick_login > a > .icon_wx{
+	color: #3CB035;
+}
+

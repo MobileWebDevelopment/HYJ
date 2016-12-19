@@ -1,0 +1,21 @@
+@charset "utf-8";
+header{
+	height: 44px;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #D7D7D7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 43px;
+	color: #A2A2A2;
+	font-size: 16px;
+	z-index: 9999;
+}
+header > a > i.icon_back{
+	font-size: 24px;
+	color: #6C6C6C;
+	position: absolute;
+	left: 10px;
+}

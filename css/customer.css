@@ -1,0 +1,67 @@
+@charset "utf-8";
+header > i.icon_add{
+	position: absolute;
+	font-size: 24px;
+	color: #ff9342;
+	right: 15px;
+}
+.search{
+	margin-top: 44px;
+	background-color: #fff;
+	height: 45px;
+	padding: 5px 0.75rem;
+}
+.search > form{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.search > form > input{
+	width: 6rem;
+	height: 35px;
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	padding-left: 30px;
+	color: #C7C7CD;
+}
+.search > form > i.icon_search{
+	position: absolute;
+	font-size: 24px;
+	top: 5px;
+	left: 5px;
+	color: #919191;
+}
+.wrapper > ul > li{
+	border-bottom: 1px solid #C8C7CC;
+}
+.wrapper > ul > li > .main{
+	background-color: #fff;
+	width: 100%;
+	padding: 0.2rem;
+}
+.wrapper > ul > li > .main > img{
+	width: 2rem;
+	height: 2rem;
+}
+.wrapper > ul > li > .main > .rside{
+	width: 5.1rem;
+	padding-left: 0.2rem;
+}
+.wrapper > ul > li > .main > .rside > p{
+	font-size: 15px;
+	color: #9C9C9C;
+	line-height: 28px;
+}
+.wrapper > ul > li > .main > .rside > p:first-of-type{
+	color: #2D2D2D;
+}
+.wrapper > ul > li > .main > .rside > p:first-of-type > .zc{
+	color: #3160A1;
+}
+.wrapper > ul > li > .main > .rside > p:first-of-type > .wx{
+	color: #BB343A;
+}
+.wrapper > ul > li > .main > .rside > p:last-of-type{
+	font-size: 14px;
+	line-height: 22px;
+}
